@@ -54,13 +54,12 @@ public class HelloController {
         return "hello" + helloDTO.getName() + " , " + helloDTO.getAge();
     }
 
-    //body에 담아서 오는 값들을 받아주는게 @RequestBody
-    //메세지 컨버터에 의해서 body의 값들을 DTO에 담아준다.
+    //body로부터 넘어온 값을  DTO로 바꿀 수 있다.
     @GetMapping("/hello8")
     public HelloDTO sayHello8(){
         HelloDTO helloDTO = new HelloDTO();
         helloDTO.setName("Lee");
-        helloDTO.setAge(1); 
+        helloDTO.setAge(1);
         return helloDTO;
     }
 }
